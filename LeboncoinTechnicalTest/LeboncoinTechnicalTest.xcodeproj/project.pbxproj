@@ -8,22 +8,50 @@
 
 /* Begin PBXBuildFile section */
 		6490DB6C275B94C100ACF2AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB6B275B94C100ACF2AE /* AppDelegate.swift */; };
-		6490DB6E275B94C100ACF2AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB6D275B94C100ACF2AE /* SceneDelegate.swift */; };
-		6490DB70275B94C100ACF2AE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB6F275B94C100ACF2AE /* ViewController.swift */; };
-		6490DB73275B94C100ACF2AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6490DB71275B94C100ACF2AE /* Main.storyboard */; };
 		6490DB75275B94C400ACF2AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6490DB74275B94C400ACF2AE /* Assets.xcassets */; };
 		6490DB78275B94C400ACF2AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6490DB76275B94C400ACF2AE /* LaunchScreen.storyboard */; };
+		6490DB86275B9B5C00ACF2AE /* ClassifiedAdListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB85275B9B5C00ACF2AE /* ClassifiedAdListViewController.swift */; };
+		6490DB88275BA65B00ACF2AE /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB87275BA65B00ACF2AE /* Date+Extensions.swift */; };
+		6490DB8A275BA67300ACF2AE /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB89275BA67300ACF2AE /* String+Extensions.swift */; };
+		6490DB8C275BA68D00ACF2AE /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB8B275BA68D00ACF2AE /* UIViewController+Extensions.swift */; };
+		6490DB8E275BA6B100ACF2AE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB8D275BA6B100ACF2AE /* Constants.swift */; };
+		6490DB90275BA6E200ACF2AE /* ClassifiedAdModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB8F275BA6E200ACF2AE /* ClassifiedAdModel.swift */; };
+		6490DB92275BA6FB00ACF2AE /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB91275BA6FB00ACF2AE /* CategoryModel.swift */; };
+		6490DB94275BA71600ACF2AE /* ClassifiedAdsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB93275BA71600ACF2AE /* ClassifiedAdsViewModel.swift */; };
+		6490DB96275BA73000ACF2AE /* ClassifiedAdViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB95275BA73000ACF2AE /* ClassifiedAdViewModel.swift */; };
+		6490DB98275BA74700ACF2AE /* CategoriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB97275BA74700ACF2AE /* CategoriesViewModel.swift */; };
+		6490DB9A275BA76100ACF2AE /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB99275BA76100ACF2AE /* CategoryViewModel.swift */; };
+		6490DB9C275BA78500ACF2AE /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB9B275BA78500ACF2AE /* Webservice.swift */; };
+		6490DB9E275BA79D00ACF2AE /* CategoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB9D275BA79D00ACF2AE /* CategoryService.swift */; };
+		6490DBA0275BA7C100ACF2AE /* ClassifiedAdService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB9F275BA7C100ACF2AE /* ClassifiedAdService.swift */; };
+		6490DBA2275BA7FA00ACF2AE /* ClassifiedAdDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DBA1275BA7FA00ACF2AE /* ClassifiedAdDetailViewController.swift */; };
+		6490DBA4275BA81500ACF2AE /* ClassifiedAdTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DBA3275BA81500ACF2AE /* ClassifiedAdTableViewCell.swift */; };
+		6490DBA6275BA83000ACF2AE /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DBA5275BA83000ACF2AE /* CategoryListViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6490DB68275B94C100ACF2AE /* LeboncoinTechnicalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeboncoinTechnicalTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6490DB6B275B94C100ACF2AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6490DB6D275B94C100ACF2AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6490DB6F275B94C100ACF2AE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		6490DB72275B94C100ACF2AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6490DB74275B94C400ACF2AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6490DB77275B94C400ACF2AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6490DB79275B94C400ACF2AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6490DB85275B9B5C00ACF2AE /* ClassifiedAdListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdListViewController.swift; sourceTree = "<group>"; };
+		6490DB87275BA65B00ACF2AE /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		6490DB89275BA67300ACF2AE /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		6490DB8B275BA68D00ACF2AE /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		6490DB8D275BA6B100ACF2AE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6490DB8F275BA6E200ACF2AE /* ClassifiedAdModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdModel.swift; sourceTree = "<group>"; };
+		6490DB91275BA6FB00ACF2AE /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		6490DB93275BA71600ACF2AE /* ClassifiedAdsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdsViewModel.swift; sourceTree = "<group>"; };
+		6490DB95275BA73000ACF2AE /* ClassifiedAdViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdViewModel.swift; sourceTree = "<group>"; };
+		6490DB97275BA74700ACF2AE /* CategoriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewModel.swift; sourceTree = "<group>"; };
+		6490DB99275BA76100ACF2AE /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
+		6490DB9B275BA78500ACF2AE /* Webservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
+		6490DB9D275BA79D00ACF2AE /* CategoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryService.swift; sourceTree = "<group>"; };
+		6490DB9F275BA7C100ACF2AE /* ClassifiedAdService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdService.swift; sourceTree = "<group>"; };
+		6490DBA1275BA7FA00ACF2AE /* ClassifiedAdDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdDetailViewController.swift; sourceTree = "<group>"; };
+		6490DBA3275BA81500ACF2AE /* ClassifiedAdTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdTableViewCell.swift; sourceTree = "<group>"; };
+		6490DBA5275BA83000ACF2AE /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +84,77 @@
 		6490DB6A275B94C100ACF2AE /* LeboncoinTechnicalTest */ = {
 			isa = PBXGroup;
 			children = (
+				6490DB84275B95ED00ACF2AE /* Extensions */,
+				6490DB83275B95E300ACF2AE /* Utils */,
+				6490DB82275B95D900ACF2AE /* View Models */,
+				6490DB81275B95D100ACF2AE /* Models */,
+				6490DB80275B95C600ACF2AE /* Services */,
+				6490DB7F275B95BD00ACF2AE /* Controllers */,
 				6490DB6B275B94C100ACF2AE /* AppDelegate.swift */,
-				6490DB6D275B94C100ACF2AE /* SceneDelegate.swift */,
-				6490DB6F275B94C100ACF2AE /* ViewController.swift */,
-				6490DB71275B94C100ACF2AE /* Main.storyboard */,
 				6490DB74275B94C400ACF2AE /* Assets.xcassets */,
 				6490DB76275B94C400ACF2AE /* LaunchScreen.storyboard */,
 				6490DB79275B94C400ACF2AE /* Info.plist */,
 			);
 			path = LeboncoinTechnicalTest;
+			sourceTree = "<group>";
+		};
+		6490DB7F275B95BD00ACF2AE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6490DB85275B9B5C00ACF2AE /* ClassifiedAdListViewController.swift */,
+				6490DBA1275BA7FA00ACF2AE /* ClassifiedAdDetailViewController.swift */,
+				6490DBA3275BA81500ACF2AE /* ClassifiedAdTableViewCell.swift */,
+				6490DBA5275BA83000ACF2AE /* CategoryListViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6490DB80275B95C600ACF2AE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6490DB9B275BA78500ACF2AE /* Webservice.swift */,
+				6490DB9D275BA79D00ACF2AE /* CategoryService.swift */,
+				6490DB9F275BA7C100ACF2AE /* ClassifiedAdService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6490DB81275B95D100ACF2AE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6490DB8F275BA6E200ACF2AE /* ClassifiedAdModel.swift */,
+				6490DB91275BA6FB00ACF2AE /* CategoryModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6490DB82275B95D900ACF2AE /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				6490DB93275BA71600ACF2AE /* ClassifiedAdsViewModel.swift */,
+				6490DB95275BA73000ACF2AE /* ClassifiedAdViewModel.swift */,
+				6490DB97275BA74700ACF2AE /* CategoriesViewModel.swift */,
+				6490DB99275BA76100ACF2AE /* CategoryViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		6490DB83275B95E300ACF2AE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				6490DB8D275BA6B100ACF2AE /* Constants.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		6490DB84275B95ED00ACF2AE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6490DB87275BA65B00ACF2AE /* Date+Extensions.swift */,
+				6490DB89275BA67300ACF2AE /* String+Extensions.swift */,
+				6490DB8B275BA68D00ACF2AE /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +217,6 @@
 			files = (
 				6490DB78275B94C400ACF2AE /* LaunchScreen.storyboard in Resources */,
 				6490DB75275B94C400ACF2AE /* Assets.xcassets in Resources */,
-				6490DB73275B94C100ACF2AE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +227,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6490DB70275B94C100ACF2AE /* ViewController.swift in Sources */,
+				6490DB96275BA73000ACF2AE /* ClassifiedAdViewModel.swift in Sources */,
+				6490DB8A275BA67300ACF2AE /* String+Extensions.swift in Sources */,
+				6490DBA6275BA83000ACF2AE /* CategoryListViewController.swift in Sources */,
+				6490DB86275B9B5C00ACF2AE /* ClassifiedAdListViewController.swift in Sources */,
+				6490DBA4275BA81500ACF2AE /* ClassifiedAdTableViewCell.swift in Sources */,
+				6490DB9E275BA79D00ACF2AE /* CategoryService.swift in Sources */,
+				6490DB8C275BA68D00ACF2AE /* UIViewController+Extensions.swift in Sources */,
+				6490DBA0275BA7C100ACF2AE /* ClassifiedAdService.swift in Sources */,
+				6490DB9A275BA76100ACF2AE /* CategoryViewModel.swift in Sources */,
 				6490DB6C275B94C100ACF2AE /* AppDelegate.swift in Sources */,
-				6490DB6E275B94C100ACF2AE /* SceneDelegate.swift in Sources */,
+				6490DB88275BA65B00ACF2AE /* Date+Extensions.swift in Sources */,
+				6490DB92275BA6FB00ACF2AE /* CategoryModel.swift in Sources */,
+				6490DB90275BA6E200ACF2AE /* ClassifiedAdModel.swift in Sources */,
+				6490DB8E275BA6B100ACF2AE /* Constants.swift in Sources */,
+				6490DB9C275BA78500ACF2AE /* Webservice.swift in Sources */,
+				6490DB94275BA71600ACF2AE /* ClassifiedAdsViewModel.swift in Sources */,
+				6490DB98275BA74700ACF2AE /* CategoriesViewModel.swift in Sources */,
+				6490DBA2275BA7FA00ACF2AE /* ClassifiedAdDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		6490DB71275B94C100ACF2AE /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				6490DB72275B94C100ACF2AE /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		6490DB76275B94C400ACF2AE /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,7 +390,7 @@
 				INFOPLIST_FILE = LeboncoinTechnicalTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,7 +418,7 @@
 				INFOPLIST_FILE = LeboncoinTechnicalTest/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
