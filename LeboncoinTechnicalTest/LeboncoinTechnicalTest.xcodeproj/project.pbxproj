@@ -14,6 +14,7 @@
 		6419E7D1275D2D0E0041B120 /* ClassifiedAdMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419E7D0275D2D0E0041B120 /* ClassifiedAdMockService.swift */; };
 		6419E7D3275D2D200041B120 /* CategoryUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419E7D2275D2D200041B120 /* CategoryUnitTests.swift */; };
 		6419E7D5275D2D300041B120 /* CategoryMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419E7D4275D2D300041B120 /* CategoryMockService.swift */; };
+		642867BF2767B4E2002DEE83 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642867BE2767B4E2002DEE83 /* UIImageView+Extensions.swift */; };
 		6490DB6C275B94C100ACF2AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB6B275B94C100ACF2AE /* AppDelegate.swift */; };
 		6490DB75275B94C400ACF2AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6490DB74275B94C400ACF2AE /* Assets.xcassets */; };
 		6490DB78275B94C400ACF2AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6490DB76275B94C400ACF2AE /* LaunchScreen.storyboard */; };
@@ -63,6 +64,7 @@
 		6419E7D0275D2D0E0041B120 /* ClassifiedAdMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdMockService.swift; sourceTree = "<group>"; };
 		6419E7D2275D2D200041B120 /* CategoryUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryUnitTests.swift; sourceTree = "<group>"; };
 		6419E7D4275D2D300041B120 /* CategoryMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMockService.swift; sourceTree = "<group>"; };
+		642867BE2767B4E2002DEE83 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		6490DB68275B94C100ACF2AE /* LeboncoinTechnicalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeboncoinTechnicalTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6490DB6B275B94C100ACF2AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6490DB74275B94C400ACF2AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 				6490DB87275BA65B00ACF2AE /* Date+Extensions.swift */,
 				6490DB89275BA67300ACF2AE /* String+Extensions.swift */,
 				6490DB8B275BA68D00ACF2AE /* UIViewController+Extensions.swift */,
+				642867BE2767B4E2002DEE83 /* UIImageView+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -401,6 +404,7 @@
 				6490DBA6275BA83000ACF2AE /* CategoryListViewController.swift in Sources */,
 				6490DB86275B9B5C00ACF2AE /* ClassifiedAdListViewController.swift in Sources */,
 				6490DBA4275BA81500ACF2AE /* ClassifiedAdTableViewCell.swift in Sources */,
+				642867BF2767B4E2002DEE83 /* UIImageView+Extensions.swift in Sources */,
 				6490DB9E275BA79D00ACF2AE /* CategoryService.swift in Sources */,
 				6490DB8C275BA68D00ACF2AE /* UIViewController+Extensions.swift in Sources */,
 				6490DBA0275BA7C100ACF2AE /* ClassifiedAdService.swift in Sources */,

@@ -120,19 +120,7 @@ class ClassifiedAdTableViewCell: UITableViewCell {
         priceLabel.text = "\(vm.price) €"
         urgentLabel.text = vm.isUrgent ? "  URGENT  " : ""
         urgentLabel.isHidden = vm.isUrgent ? false : true
-        
-        if let url = URL(string: vm.imageSmall) {
-            let task = URLSession.shared.dataTask(with: url) { data, response, error in
-                guard let data = data, error == nil else {
-                    return
-                }
-        
-                DispatchQueue.main.async {
-                    self.classifiedAdImage.image = UIImage(data: data) ?? UIImage(named: "placeholder")
-                }
-            }
-            task.resume()
-        }
+        classifiedAdImage.loadImageUsingCache(withUrl: vm.imageSmall)
     }
 }
 

@@ -182,17 +182,7 @@ class ClassifiedAdDetailViewController : UIViewController {
         priceLabel.text = "\(classifiedAdViewModel?.price ?? 0) €"
         dateLabel.text = classifiedAdViewModel?.creationDate?.toString() ?? "Date inconnue"
         descriptionLabel.text = classifiedAdViewModel?.description ?? "Pas de description."
-        
-        if let url = URL(string: classifiedAdViewModel!.imageThumb) {
-            let task = URLSession.shared.dataTask(with: url) { data, response, error in
-                guard let data = data, error == nil else { return }
-                
-                DispatchQueue.main.async {
-                    self.classifiedAdImage.image = UIImage(data: data) ?? UIImage(named: "placeholder")
-                }
-            }
-            task.resume()
-        }
+        classifiedAdImage.loadImageUsingCache(withUrl: classifiedAdViewModel!.imageThumb)
     }
     
     @objc func close(sender: UIButton!) {
