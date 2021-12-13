@@ -94,7 +94,6 @@ class ClassifiedAdListViewController : UIViewController, CategoryDelegate {
     @objc func onFilterButtonClicked(_ sender: Any){
         let categoryListVC = CategoryListViewController()
         categoryListVC.categoriesVM = categoriesVM
-        categoryListVC.modalPresentationStyle = .popover
         categoryListVC.delegate = self
         present(categoryListVC, animated: true, completion: nil)
     }
@@ -137,7 +136,6 @@ extension ClassifiedAdListViewController : UITableViewDelegate, UITableViewDataS
         } else {
             vc.classifiedAdViewModel = classifiedAdsVM.classifiedAdViewModels[indexPath.row]
         }
-        vc.modalPresentationStyle = .popover
         present(vc, animated: true, completion: nil)
     }
 }
