@@ -100,54 +100,51 @@ class ClassifiedAdDetailViewController : UIViewController {
         super.viewDidLoad()
         view.backgroundColor = .white
         setUpInfo()
-        setUpScrollView()
         setUpViews()
         setUpConstraints()
     }
     
-    private func setUpScrollView() {
+    private func setUpViews() {
         scrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.accessibilityIdentifier = "scrollView"
         contentView.translatesAutoresizingMaskIntoConstraints = false
         
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
-        scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        scrollView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        scrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
-        contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor).isActive = true
-        contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor).isActive = true
-        contentView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
-        contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
-    }
-    
-    private func setUpViews() {
-        view.addSubview(barView)
-        barView.addSubview(closeButton)
         contentView.addSubview(classifiedAdImage)
         contentView.addSubview(titleLabel)
         contentView.addSubview(priceLabel)
         contentView.addSubview(dateLabel)
         contentView.addSubview(descriptionTitleLabel)
         contentView.addSubview(descriptionLabel)
+        view.addSubview(barView)
+        barView.addSubview(closeButton)
     }
     
     private func setUpConstraints(){
-        
         var constraints = [NSLayoutConstraint]()
         
-        constraints.append(barView.topAnchor.constraint(equalTo: contentView.topAnchor))
-        constraints.append(barView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor))
-        constraints.append(barView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor))
+        constraints.append(barView.topAnchor.constraint(equalTo: view.topAnchor))
+        constraints.append(barView.leadingAnchor.constraint(equalTo: view.leadingAnchor))
+        constraints.append(barView.trailingAnchor.constraint(equalTo: view.trailingAnchor))
         constraints.append(barView.heightAnchor.constraint(equalToConstant: 60))
         
-        constraints.append(closeButton.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 15))
-        constraints.append(closeButton.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -15))
+        constraints.append(closeButton.topAnchor.constraint(equalTo: barView.topAnchor, constant: 15))
+        constraints.append(closeButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -15))
         constraints.append(closeButton.heightAnchor.constraint(equalToConstant: 30))
         constraints.append(closeButton.widthAnchor.constraint(equalToConstant: 30))
         
-        constraints.append(classifiedAdImage.topAnchor.constraint(equalTo: barView.bottomAnchor))
+        constraints.append(scrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor))
+        constraints.append(scrollView.widthAnchor.constraint(equalTo: view.widthAnchor))
+        constraints.append(scrollView.topAnchor.constraint(equalTo: view.topAnchor,constant: 60))
+        constraints.append(scrollView.bottomAnchor.constraint(equalTo: view.bottomAnchor))
+        
+        constraints.append(contentView.centerXAnchor.constraint(equalTo: scrollView.centerXAnchor))
+        constraints.append(contentView.widthAnchor.constraint(equalTo: scrollView.widthAnchor))
+        constraints.append(contentView.topAnchor.constraint(equalTo: scrollView.topAnchor))
+        constraints.append(contentView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor))
+        
+        constraints.append(classifiedAdImage.topAnchor.constraint(equalTo: contentView.topAnchor))
         constraints.append(classifiedAdImage.leadingAnchor.constraint(equalTo: contentView.leadingAnchor))
         constraints.append(classifiedAdImage.trailingAnchor.constraint(equalTo: contentView.trailingAnchor))
         constraints.append(classifiedAdImage.heightAnchor.constraint(equalToConstant: UIScreen.main.bounds.width))
