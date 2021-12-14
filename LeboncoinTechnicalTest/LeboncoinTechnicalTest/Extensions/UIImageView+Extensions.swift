@@ -24,10 +24,15 @@ extension UIImageView {
         }
 
         let activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView.init(style: UIActivityIndicatorView.Style.medium)
+        
+        activityIndicator.translatesAutoresizingMaskIntoConstraints = false
         addSubview(activityIndicator)
         activityIndicator.startAnimating()
-        activityIndicator.center = self.center
-
+        activityIndicator.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
+        activityIndicator.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+        activityIndicator.widthAnchor.constraint(equalToConstant: 20).isActive = true
+        activityIndicator.heightAnchor.constraint(equalToConstant: 20).isActive = true
+        
         // if not, download image from url
         URLSession.shared.dataTask(with: url!, completionHandler: { (data, response, error) in
             if error != nil {
