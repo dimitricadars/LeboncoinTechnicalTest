@@ -14,8 +14,11 @@ extension UIImageView {
     
     func loadImageUsingCache(withUrl urlString : String) {
         let url = URL(string: urlString)
-        if url == nil {return}
         self.image = nil
+        if url == nil {
+            self.image = UIImage(named: "placeholder")
+            return
+        }
 
         // check cached image
         if let cachedImage = imageCache.object(forKey: urlString as NSString)  {
