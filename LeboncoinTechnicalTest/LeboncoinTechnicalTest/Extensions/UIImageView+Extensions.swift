@@ -43,13 +43,13 @@ extension UIImageView {
                 return
             }
 
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak self] in
                 if let image = UIImage(data: data!) {
                     imageCache.setObject(image, forKey: urlString as NSString)
-                    self.image = image
+                    self?.image = image
                     activityIndicator.removeFromSuperview()
                 } else {
-                    self.image = UIImage(named: "placeholder")
+                    self?.image = UIImage(named: "placeholder")
                     activityIndicator.removeFromSuperview()
                 }
             }

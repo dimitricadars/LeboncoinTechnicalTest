@@ -100,8 +100,7 @@ extension CategoryListViewController: UITableViewDelegate, UITableViewDataSource
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoryTableViewCell", for: indexPath)
         cell.textLabel?.textAlignment = .center
-        if (indexPath.row == 0)
-        {
+        if (indexPath.row == 0) {
             cell.textLabel?.text = "Toutes les catégories"
         } else {
             cell.textLabel?.text = categoriesVM.categoryViewModels[indexPath.row-1].name
@@ -123,7 +122,4 @@ extension CategoryListViewController: UITableViewDelegate, UITableViewDataSource
         self.delegate?.categoryDidSelected(categoryId: selectedCategoryID)
         dismiss(animated: true, completion: nil)
     }
-    
-    
 }
-

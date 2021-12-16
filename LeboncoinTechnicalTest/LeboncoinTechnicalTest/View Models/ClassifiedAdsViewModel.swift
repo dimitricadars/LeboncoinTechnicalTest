@@ -20,19 +20,19 @@ class ClassifiedAdsViewModel {
         return classifiedAdViewModels.count
     }
     
-    func getClassifiedAds(completion: @escaping ([ClassifiedAdViewModel]) -> Void) {
+    func getClassifiedAds(completion: @escaping (Result<[ClassifiedAdViewModel],Error>) -> Void) {
         
         classifiedAdService.getClassifiedAds { resultOfClassifiedAd in
             switch resultOfClassifiedAd {
                 
-            case .success(_):
+            case .success:
                 if let arrayClassifiedAd = try? resultOfClassifiedAd.get() {
                     self.classifiedAdViewModels = arrayClassifiedAd
-                    completion(arrayClassifiedAd)
+                    completion(.success(arrayClassifiedAd))
                 }
                 break
-            case .failure(_):
-                completion([])
+            case .failure(let error):
+                completion(.failure(error))
                 break
             }
             
@@ -46,9 +46,9 @@ class ClassifiedAdsViewModel {
     }
     
     func filterClassifiedAdsByCategoryID(catID :Int)->[ClassifiedAdViewModel]{
-        if catID == 0{
+        if catID == 0 {
             return self.classifiedAdViewModels
-        }else{
+        } else {
             let arrayToFilter = self.classifiedAdViewModels.filter{$0.categoryID == catID}
             return arrayToFilter
         }

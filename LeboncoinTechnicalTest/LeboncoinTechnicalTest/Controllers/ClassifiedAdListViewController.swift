@@ -10,8 +10,8 @@ import UIKit
 
 class ClassifiedAdListViewController : UIViewController, CategoryDelegate {
     
-    private var classifiedAdsVM : ClassifiedAdsViewModel!
-    private var categoriesVM : CategoriesViewModel!
+    private var classifiedAdsVM = ClassifiedAdsViewModel()
+    private var categoriesVM = CategoriesViewModel()
     private var filteredClassifiedAdsVM : [ClassifiedAdViewModel]!
     
     var selectedCategoryID: Int = 0
@@ -25,50 +25,19 @@ class ClassifiedAdListViewController : UIViewController, CategoryDelegate {
         return tableView
     }()
     
+    private lazy var filterBarButtonItem: UIBarButtonItem = {
+        let barButtonItem = UIBarButtonItem(image: UIImage(named: "filter-30"), style: .plain, target: self, action: #selector(onFilterButtonClicked))
+        barButtonItem.accessibilityIdentifier = "filterBarButton"
+        return barButtonItem
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .orange
         setUpTableView()
         setUpNavigationController()
-        
-        categoriesVM = getCategoriesVM()
-        classifiedAdsVM = getClassifiedAdsVM()
-        
-    }
-    
-    func categoryDidSelected(categoryId: Int) {
-        let loader = self.loader()
-        self.selectedCategoryID = categoryId
-        if (self.selectedCategoryID != 0)
-        {
-            filteredClassifiedAdsVM = classifiedAdsVM.filterClassifiedAdsByCategoryID(catID: selectedCategoryID)
-        }else{
-            filteredClassifiedAdsVM = classifiedAdsVM.classifiedAdViewModels
-        }
-        
-        self.classifiedAdsTableView.reloadData()
-        self.stopLoader(loader: loader)
-    }
-    
-    private func getCategoriesVM() -> CategoriesViewModel {
-        let categoriesVM = CategoriesViewModel()
-        categoriesVM.getCategories() { (vm) in
-            categoriesVM.categoryViewModels = vm
-        }
-        return categoriesVM
-    }
-    
-    private func getClassifiedAdsVM() -> ClassifiedAdsViewModel {
-        let loader =   self.loader()
-        let classifiedAdsVM = ClassifiedAdsViewModel()
-        classifiedAdsVM.getClassifiedAds() { (vm) in
-            classifiedAdsVM.classifiedAdViewModels = classifiedAdsVM.sortClassifiedAdsByDateAndUrgency(arrayClassifiedAd: vm)
-            self.classifiedAdsTableView.reloadData()
-            self.stopLoader(loader: loader)
-        }
-        
-        return classifiedAdsVM
-        
+        getCategoriesVM()
+        getClassifiedAdsVM()
     }
     
     private func setUpTableView() {
@@ -85,10 +54,51 @@ class ClassifiedAdListViewController : UIViewController, CategoryDelegate {
     private func setUpNavigationController() {
         navigationItem.title = "leboncoin"
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationItem.rightBarButtonItem  = self.filterBarButtonItem
+    }
+    
+    private func getClassifiedAdsVM() {
+        let loader = self.loader()
+        classifiedAdsVM.getClassifiedAds { [weak self] result in
+            switch result {
+            case .success(let arrayClassifiedAd):
+                if let sortClassifiedAdViewModels = self?.classifiedAdsVM.sortClassifiedAdsByDateAndUrgency(arrayClassifiedAd: arrayClassifiedAd) {
+                    self?.classifiedAdsVM.classifiedAdViewModels = sortClassifiedAdViewModels
+                    self?.classifiedAdsTableView.reloadData()
+                    self?.stopLoader(loader: loader)
+                }
+            case .failure:
+                self?.stopLoader(loader: loader)
+                self?.displayAlert(message: "Désolé, quelque chose s'est mal passé. Réessayez plus tard",title: "Error")
+            }
+        }
+    }
+    
+    private func getCategoriesVM() {
+        let loader = self.loader()
+        categoriesVM.getCategories() { [weak self] result in
+            switch result {
+            case .success(let arrayCategory):
+                self?.categoriesVM.categoryViewModels = arrayCategory
+                self?.stopLoader(loader: loader)
+            case .failure:
+                self?.stopLoader(loader: loader)
+                self?.displayAlert(message: "Désolé, quelque chose s'est mal passé. Réessayez plus tard",title: "Error")
+            }
+        }
+    }
+    
+    func categoryDidSelected(categoryId: Int) {
+        let loader = self.loader()
+        self.selectedCategoryID = categoryId
+        if (self.selectedCategoryID != 0) {
+            filteredClassifiedAdsVM = classifiedAdsVM.filterClassifiedAdsByCategoryID(catID: selectedCategoryID)
+        } else {
+            filteredClassifiedAdsVM = classifiedAdsVM.classifiedAdViewModels
+        }
         
-        let filterBarButtonItem = UIBarButtonItem(image: UIImage(named: "filter-30"), style: .plain, target: self, action: #selector(onFilterButtonClicked))
-        filterBarButtonItem.accessibilityIdentifier = "filterBarButton"
-        self.navigationItem.rightBarButtonItem  = filterBarButtonItem
+        self.classifiedAdsTableView.reloadData()
+        self.stopLoader(loader: loader)
     }
     
     @objc func onFilterButtonClicked(_ sender: Any){
@@ -97,7 +107,6 @@ class ClassifiedAdListViewController : UIViewController, CategoryDelegate {
         categoryListVC.delegate = self
         present(categoryListVC, animated: true, completion: nil)
     }
-    
 }
 
 

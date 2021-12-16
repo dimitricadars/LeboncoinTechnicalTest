@@ -13,7 +13,7 @@ protocol ClassifiedAdServiceProtocol {
 
 final class ClassifiedAdService : ClassifiedAdServiceProtocol {
     
-    func getClassifiedAds(completion: @escaping (Result<[ClassifiedAdViewModel], Error>) -> ()) {
+    func getClassifiedAds(completion: @escaping (Result<[ClassifiedAdViewModel],Error>) -> ()) {
         
         let classifiedAdsURL = Constants.Urls.urlForClassifiedAds()
         let classifiedAdsResource = Resource<[ClassifiedAdModel]>(url: classifiedAdsURL) { data in

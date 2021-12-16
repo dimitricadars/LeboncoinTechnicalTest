@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		6419E7B7275D2ACA0041B120 /* LeboncoinTechnicalTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419E7B6275D2ACA0041B120 /* LeboncoinTechnicalTestUITests.swift */; };
 		6419E7B9275D2ACA0041B120 /* LeboncoinTechnicalTestUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419E7B8275D2ACA0041B120 /* LeboncoinTechnicalTestUITestsLaunchTests.swift */; };
-		6419E7C6275D2CA70041B120 /* LeboncoinTechnicalTestUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419E7C5275D2CA70041B120 /* LeboncoinTechnicalTestUnitTests.swift */; };
 		6419E7CF275D2CFA0041B120 /* ClassifiedAdUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419E7CE275D2CFA0041B120 /* ClassifiedAdUnitTest.swift */; };
 		6419E7D1275D2D0E0041B120 /* ClassifiedAdMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419E7D0275D2D0E0041B120 /* ClassifiedAdMockService.swift */; };
 		6419E7D3275D2D200041B120 /* CategoryUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419E7D2275D2D200041B120 /* CategoryUnitTests.swift */; };
 		6419E7D5275D2D300041B120 /* CategoryMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6419E7D4275D2D300041B120 /* CategoryMockService.swift */; };
 		642867BF2767B4E2002DEE83 /* UIImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642867BE2767B4E2002DEE83 /* UIImageView+Extensions.swift */; };
+		642867C1276A30E1002DEE83 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 642867C0276A30E1002DEE83 /* NetworkError.swift */; };
 		6490DB6C275B94C100ACF2AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6490DB6B275B94C100ACF2AE /* AppDelegate.swift */; };
 		6490DB75275B94C400ACF2AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6490DB74275B94C400ACF2AE /* Assets.xcassets */; };
 		6490DB78275B94C400ACF2AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6490DB76275B94C400ACF2AE /* LaunchScreen.storyboard */; };
@@ -59,12 +59,12 @@
 		6419E7B6275D2ACA0041B120 /* LeboncoinTechnicalTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeboncoinTechnicalTestUITests.swift; sourceTree = "<group>"; };
 		6419E7B8275D2ACA0041B120 /* LeboncoinTechnicalTestUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeboncoinTechnicalTestUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		6419E7C3275D2CA70041B120 /* LeboncoinTechnicalTestUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LeboncoinTechnicalTestUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		6419E7C5275D2CA70041B120 /* LeboncoinTechnicalTestUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeboncoinTechnicalTestUnitTests.swift; sourceTree = "<group>"; };
 		6419E7CE275D2CFA0041B120 /* ClassifiedAdUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdUnitTest.swift; sourceTree = "<group>"; };
 		6419E7D0275D2D0E0041B120 /* ClassifiedAdMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClassifiedAdMockService.swift; sourceTree = "<group>"; };
 		6419E7D2275D2D200041B120 /* CategoryUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryUnitTests.swift; sourceTree = "<group>"; };
 		6419E7D4275D2D300041B120 /* CategoryMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryMockService.swift; sourceTree = "<group>"; };
 		642867BE2767B4E2002DEE83 /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
+		642867C0276A30E1002DEE83 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		6490DB68275B94C100ACF2AE /* LeboncoinTechnicalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LeboncoinTechnicalTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6490DB6B275B94C100ACF2AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6490DB74275B94C400ACF2AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -128,7 +128,6 @@
 			children = (
 				6419E7CC275D2CB60041B120 /* ClassifiedAdUseCase */,
 				6419E7CD275D2CC00041B120 /* CategoryUseCase */,
-				6419E7C5275D2CA70041B120 /* LeboncoinTechnicalTestUnitTests.swift */,
 			);
 			path = LeboncoinTechnicalTestUnitTests;
 			sourceTree = "<group>";
@@ -205,6 +204,7 @@
 				6490DB9B275BA78500ACF2AE /* Webservice.swift */,
 				6490DB9D275BA79D00ACF2AE /* CategoryService.swift */,
 				6490DB9F275BA7C100ACF2AE /* ClassifiedAdService.swift */,
+				642867C0276A30E1002DEE83 /* NetworkError.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -388,7 +388,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				6419E7D1275D2D0E0041B120 /* ClassifiedAdMockService.swift in Sources */,
-				6419E7C6275D2CA70041B120 /* LeboncoinTechnicalTestUnitTests.swift in Sources */,
 				6419E7CF275D2CFA0041B120 /* ClassifiedAdUnitTest.swift in Sources */,
 				6419E7D5275D2D300041B120 /* CategoryMockService.swift in Sources */,
 				6419E7D3275D2D200041B120 /* CategoryUnitTests.swift in Sources */,
@@ -408,6 +407,7 @@
 				6490DB9E275BA79D00ACF2AE /* CategoryService.swift in Sources */,
 				6490DB8C275BA68D00ACF2AE /* UIViewController+Extensions.swift in Sources */,
 				6490DBA0275BA7C100ACF2AE /* ClassifiedAdService.swift in Sources */,
+				642867C1276A30E1002DEE83 /* NetworkError.swift in Sources */,
 				6490DB9A275BA76100ACF2AE /* CategoryViewModel.swift in Sources */,
 				6490DB6C275B94C100ACF2AE /* AppDelegate.swift in Sources */,
 				6490DB88275BA65B00ACF2AE /* Date+Extensions.swift in Sources */,

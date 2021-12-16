@@ -16,19 +16,19 @@ class CategoriesViewModel {
         self.categoryService = categoryService
     }
     
-    func getCategories(completion: @escaping ([CategoryViewModel]) -> Void) {
+    func getCategories(completion: @escaping (Result<[CategoryViewModel],Error>) -> Void) {
         
         categoryService.getCategories { resultOfCat in
             switch resultOfCat {
                 
-            case .success(_):
+            case .success:
                 if let arrayCat = try? resultOfCat.get() {
                     self.categoryViewModels = arrayCat
-                    completion(arrayCat)
+                    completion(.success(arrayCat))
                 }
                 break
-            case .failure(_):
-                completion([])
+            case .failure(let error):
+                completion(.failure(error))
                 break
             }
         }
@@ -41,7 +41,7 @@ class CategoriesViewModel {
                 return categoryVM.name
             }
         }
-        return "Non défini"
+        return ""
     }
     
 }
