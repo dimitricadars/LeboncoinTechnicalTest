@@ -69,7 +69,7 @@ class ClassifiedAdListViewController : UIViewController, CategoryDelegate {
                 }
             case .failure:
                 self?.stopLoader(loader: loader)
-                self?.displayAlert(message: "Désolé, quelque chose s'est mal passé. Réessayez plus tard",title: "Error")
+                self?.displayAlert(message: "Désolé, quelque chose s'est mal passé dans la récupération des annonces. Réessayez plus tard",title: "Error")
             }
         }
     }
